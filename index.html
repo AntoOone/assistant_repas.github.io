@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assistant de Repas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Assistant de Repas</h1>
+    <main>
+      <div class="container">
+        <div name="disposition-container">
+          <h2>Disposition</h2>
+        </div>
+
+        <div id="ingredients">
+          <h2>Ingrédients</h2>
+          <div id="ingredient-container">
+            <label>Liste des ingrédients :</label>
+            <ul id="ingredients-list"></ul>
+            <div id="ingredient-creation">
+              <fieldset>
+                <h3>Créer un ingrédient</h3>
+                <input
+                  type="text"
+                  name=""
+                  id="create-ingredient-name"
+                  placeholder="Nom de l'ingrédient"
+                />
+                <label for="ingredient-types">Type de l'ingrédient :</label>
+                <select
+                  name="ingredient-types"
+                  id="ingredient-types-dropdown"
+                ></select>
+                <button id="create-ingredient-button">Créer</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div id="recipes">
+          <h2>Recettes</h2>
+          <div id="recipe-container">
+            <label>Liste des recettes :</label>
+            <ul id="recipes-list"></ul>
+            <div id="recipe-creation">
+              <fieldset>
+                <h3>Créer une recette</h3>
+                <input
+                  type="text"
+                  name="recipe-name"
+                  id="create-recipe-name"
+                  placeholder="Nom de la recette"
+                />
+                <fieldset name="add-ingredients">
+                  <label for="ingredient-search">Ajouter des ingrédients</label>
+                  <input
+                    type="search"
+                    name="ingredient-search"
+                    id="create-recipe-addingredient-name"
+                    placeholder="Chercher des ingrédients"
+                  />
+                  <button id="create-recipe-addingredient-button">Ajouter</button>
+                  <ul
+                    name="ingredients-added"
+                    id="create-recipe-ingredients-list"
+                  ></ul>
+                </fieldset>
+                <button id="create-recipe-button">Créer</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./ingredient/ingredient.js"></script>
+    <script src="./ingredient/createIngredient.js"></script>
+    <script src="./recipe/recipe.js"></script>
+    <script src="./recipe/createRecipe.js"></script>
+    <script src="./display.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
